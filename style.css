@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222831;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .neumorphic-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #222831;
+    box-shadow: 15px 15px 30px #1a1e23, -15px -15px 30px #2f343d;
+    border-radius: 30px;
+  }
+  
+  .form-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #dee3ea;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #222831;
+    box-shadow: inset 10px 10px 15px #1a1e23, inset -10px -10px 15px #2f343d;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #dee3ea;
+  }
+  
+  label {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #dee3ea;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+  }
+  
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    top: -12px;
+    font-size: 14px;
+    color: #6C5CE7;
+  }
+  
+  .neumorphic-button {
+    display: inline-block;
+    padding: 20px;
+    background-color: #00fb36;
+    border-radius: 25px;
+    box-shadow: inset 15px 15px 30px #1a1e23, inset -15px -15px 30px #2f343d;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .neumorphic-button:hover {
+    transform: translateY(-5px);
+    box-shadow: inset 10px 10px 20px #1a1e23, inset -10px -10px 20px #2f343d;
+  }
+  
+  .neumorphic-button:active {
+    transform: translateY(-2px);
+    box-shadow: inset 5px 5px 15px #1a1e23, inset -5px -5px 15px #2f343d;
+  }
+  
+  .neumorphic-button:focus {
+    outline: none;
+  }
+  
+  .neumorphic-button.primary {
+    background-color: #6C5CE7;
+    color: #dee3ea;
+  }
+  
+  .neumorphic-button.primary:hover {
+    box-shadow: inset 10px 10px 20px #5945d5, inset -10px -10px 20px #7e6ff0;
+  }
+
+  .neumorphic-button.primary:active {
+    box-shadow: inset 5px 5px 15px #594;
+    transform: translateY(-1px);
+  }
+
+  :root {
+    --bg-color: #F5F6FA;
+    --text-color: #8E97A6;
+    --box-shadow-light: 20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff;
+    --box-shadow-dark: inset 20px 20px 60px #1e1f26, inset -20px -20px 60px #2f303e;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #222;
+      --text-color: #ccc;
+      --box-shadow-light: inset 20px 20px 60px #1e1f26, inset -20px -20px 60px #2f303e;
+      --box-shadow-dark: 20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff;
+    }
+  
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+  }
